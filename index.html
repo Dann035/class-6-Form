@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <form action="#" method="post">
+
+        <label for="card">Card #</label>
+        <input type="number" id="card" name="card" size="16" placeholder="XXXXXXXXXXXXXXXX" required>
+        <label for="cvc">CVC #</label>
+        <input type="number" id="cvc" name="cvc" size="4" placeholder="0000" required>
+        <span>$</span>
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" name="amount" placeholder="Amount" required>
+
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="fullname" value="firstName" placeholder="Amount" required>
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="fullname" value="lastName" placeholder="Amount" required>
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="ubi" value="city" required>
+        <label for="state">State</label>
+        <select name="state" id="state">
+            <option value="ARG">Argentina</option>
+            <option value="ES">España</option>
+            <option value="CU">Cuba</option>
+            <option value="RU">Rusia</option>
+            <option value="EU">Estados Unidos</option>
+            <option value="COR">Corea</option>
+            <option value="JAP">Japón</option>
+        </select>
+        <label for="postalCode">Postal Code</label>
+        <input type="text" id="postalCode" name="ubi" size="10" value="postalCode" required>
+
+        <label for="optionBuy">We accept:</label>
+        <input type="radio" id="Visa" name="optionBuy" value="Visa">
+        <input type="radio" id="MasterCard" name="optionBuy" value="MasterCard">
+        <input type="radio" id="CaixaBank" name="optionBuy" value="CaixaBank">
+        <input type="radio" id="Sabadell" name="optionBuy" value="Sabadell">
+    </form>
+</body>
+</html>
