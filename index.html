@@ -1,49 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-EN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <form action="#" method="post">
-
-        <label for="card">Card #</label>
-        <input type="number" id="card" name="card" size="16" placeholder="XXXXXXXXXXXXXXXX" required>
-        <label for="cvc">CVC #</label>
-        <input type="number" id="cvc" name="cvc" size="4" placeholder="0000" required>
-        <span>$</span>
-        <label for="amount">Amount</label>
-        <input type="number" id="amount" name="amount" placeholder="Amount" required>
-
-        <label for="firstName">First Name</label>
-        <input type="text" id="firstName" name="fullname" value="firstName" placeholder="Amount" required>
-        <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" name="fullname" value="lastName" placeholder="Amount" required>
-
-        <label for="city">City</label>
-        <input type="text" id="city" name="ubi" value="city" required>
-        <label for="state">State</label>
-        <select name="state" id="state">
-            <option value="ARG">Argentina</option>
-            <option value="ES">España</option>
-            <option value="CU">Cuba</option>
-            <option value="RU">Rusia</option>
-            <option value="EU">Estados Unidos</option>
-            <option value="COR">Corea</option>
-            <option value="JAP">Japón</option>
-        </select>
-        <label for="postalCode">Postal Code</label>
-        <input type="text" id="postalCode" name="ubi" size="10" value="postalCode" required>
-
-        <label for="optionBuy">We accept:</label>
-        <input type="radio" id="Visa" name="optionBuy" value="Visa">
-        <input type="radio" id="MasterCard" name="optionBuy" value="MasterCard">
-        <input type="radio" id="CaixaBank" name="optionBuy" value="CaixaBank">
-        <input type="radio" id="Sabadell" name="optionBuy" value="Sabadell">
+        <div class="container">
+            <h1>Payment form example</h1>
+            <p class="alert alert-danger form-check">Some field are missing</p>
+            <div class="form-group d-flex">
+                <div class="d-flex flex-column me-3 w-100">
+                    <label class="form-text fw-bold" for="card">Card #</label>
+                    <input type="number" class="form-control p-1"  id="card" name="card" size="16" placeholder="XXXXXXXXXXXXXXXX" required>
+                </div>
+                <div class="d-flex flex-column me-3 w-25">
+                    <label class="form-text fw-bold" for="cvc">CVC #</label>
+                    <input type="number" class="form-control w-100 p-1" id="cvc" name="cvc" size="4" placeholder="0000">
+                </div>
+                <div class="d-flex flex-column me-3 w-50">
+                    <label class="form-text fw-bold" for="amount">Amount</label>
+                    <input type="number" class="form-control p-1" id="amount" name="amount" placeholder="$Amount">
+                </div>
+            </div>
+            <div class="form-group d-flex w-100" >
+                <div class="d-flex flex-column me-3 w-100">
+                    <label class="form-text fw-bold" for="firstName">First Name</label>
+                    <input type="text" class="w-100 p-1" id="firstName" name="fullname" placeholder="Amount">
+                </div>
+                <div class="d-flex flex-column w-100">
+                    <label class="form-text fw-bold" for="lastName">Last Name</label>
+                    <input type="text" class="w-100 p-1" id="lastName" name="fullname" placeholder="Amount">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-text" for="city">City</label>
+                <input type="text" id="city" name="ubi" value="city">
+                <label class="form-text" for="state">State</label>
+                <select name="state" id="state" >
+                    <option value=""disable selected hidden>Pick a state</option>
+                    <option value="ARG">Argentina</option>
+                    <option value="ES">España</option>
+                    <option value="CU">Cuba</option>
+                    <option value="RU">Rusia</option>
+                    <option value="EU">Estados Unidos</option>
+                    <option value="COR">Corea</option>
+                    <option value="JAP">Japón</option>
+                </select>
+                <label class="form-text" for="postalCode">Postal Code</label>
+                <input type="text" class="form-control" id="postalCode" name="ubi" size="10" value="postalCode">
+            </div>
+            <div class="form-group">
+                <label class="form-text" for="optionBuy">We accept:</label>
+                <input class="" type="radio" id="Visa" name="optionBuy" value="Visa">
+                <input class="" type="radio" id="MasterCard" name="optionBuy" value="MasterCard">
+                <input type="radio" id="CaixaBank" name="optionBuy" value="CaixaBank">
+                <input type="radio" id="Sabadell" name="optionBuy" value="Sabadell">
+                <label class="form-text" for="message">Message</label>
+                <textarea name="message" id="message" cols="40" rows="5"></textarea>
+                <span class="form-text">Add any notes here.</span>
+            </div>
+            <div class="form-group">
+                <input class="btn btn-secondary" type="reset" value="Cancelar">
+                <input class="btn btn-primary" type="submit" value="Send">
+            </div>
+        </div>
     </form>
 </body>
 </html>
