@@ -20,11 +20,11 @@
                 <div class="form-group d-flex align-items-center">
                     <fieldset class="d-flex flex-column me-3 w-100">
                         <label class="form-label fw-bold" for="card">Card #</label>
-                        <input type="number" class="form-control p-1"  id="card" name="cardInfo" placeholder="XXXXXXXXXXXXXXXX" required>
+                        <input type="tel" pattern="[0-9]{13,16}" class="form-control p-1"  maxlength="16" id="card" name="cardInfo" placeholder="XXXXXXXXXXXXXXXX" required>
                     </fieldset>
                     <fieldset class="d-flex flex-column me-3 w-50">
                         <label class="form-label fw-bold" for="cvc">CVC #</label>
-                        <input type="number" class="form-control w-100 p-1" id="cvc" name="cardInfo" placeholder="0000" required>
+                        <input type="tel" pattern="[0-9]{3,4}" class="form-control w-100 p-1" maxlength="4" id="cvc" name="cardInfo" placeholder="0000" required>
                     </fieldset>
                     <fieldset class="d-flex flex-column w-75">
                         <label class="form-label fw-bold" for="amount">Amount</label>
@@ -69,7 +69,7 @@
 
                     <fieldset class="d-flex flex-column w-25">
                         <label class="form-label fw-bold" for="postalCode">Postal Code</label>
-                        <input type="text" class="form-control p-1" id="postalCode" name="ubi" size="10" required>
+                        <input type="text" maxlength="10" class="form-control p-1" id="postalCode" name="ubi" size="10" required>
                     </fieldset>
 
                 </div>
